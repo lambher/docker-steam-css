@@ -1,0 +1,20 @@
+version: "3.7"
+
+volumes:
+  css:
+
+services:
+  css:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    network_mode: host
+    environment:
+      - CSS_HOSTNAME=JohaLamb
+      - CSS_PASSWORD=pdv
+      - RCON_PASSWORD=cxll^4kI
+    volumes:
+      - "./belair_map/:/home/steam/htdocs/"
+      - "./cfg/server.cfg:/home/steam/css/cstrike/cfg/server.cfg"
+      - "./belair_map/cstrike/maps:/home/steam/css/cstrike/maps"
+      - "./belair_map/cstrike/materials:/home/steam/css/cstrike/materials"
