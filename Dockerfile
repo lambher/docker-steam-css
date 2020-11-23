@@ -39,8 +39,10 @@ RUN cd /home/steam/css/cstrike && \
     tar zxvf /temp/sourcemod-1.7.3-git5275-linux.tar.gz && \
     unzip /temp/quake_sounds1.8.zip && \
     unzip /temp/mapchooser_extended_1.10.2.zip && \
+    cp -r /temp/deathmatch/addons/* addons/ && \
+    cp -r /temp/deathmatch/cfg/* cfg/ && \
     mv /temp/gem_damage_report.smx addons/sourcemod/plugins && \
-    rm /temp/*
+    rm -rf /temp/*
 
 # Add default configuration files
 ADD cfg/ /home/steam/css/cstrike/cfg
